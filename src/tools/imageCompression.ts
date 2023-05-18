@@ -40,7 +40,7 @@ export const handleImageCompression = async ({
 }: ImgCompress) => {
   onStart();
   const options = {
-    maxSizeMB: 0.6, // Maximum size in megabytes
+    maxSizeMB: 0.8, // Maximum size in megabytes
     maxWidthOrHeight: 1200,
     maxIteration: 15,
   };
