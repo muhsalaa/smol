@@ -22,6 +22,20 @@ export const handleVideoCompression = async ({
   const targetPath = await getOutputPath(customPath);
   const fileName = getFileName(file);
   const outputName = "compressed_" + Date.now() + "_" + fileName;
+  console.log([
+    "-y",
+    "-i",
+    file,
+    "-vcodec",
+    "libx264",
+    "-crf",
+    "22",
+    "-r",
+    "30",
+    "-movflags",
+    "+faststart",
+    targetPath + outputName,
+  ]);
 
   try {
     const cmd = new Command("compress_video", [

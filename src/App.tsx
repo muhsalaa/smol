@@ -134,7 +134,7 @@ const ImageCompressor: React.FC = () => {
             <p>Custom path</p>
             <input
               className="w-full  mt-1 border p-2 rounded"
-              placeholder="default to /Users/name/desktop"
+              placeholder="default to /Users/name/desktop/"
               onChange={(e) => (pathRef.current = e.target.value)}
             />
           </div>
