@@ -1,0 +1,82 @@
+{
+  "build": {
+    "beforeDevCommand": "yarn dev",
+    "beforeBuildCommand": "yarn build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "smol",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "path": {
+        "all": true
+      },
+      "fs": {
+        "all": true,
+        "scope": ["**"]
+      },
+      "shell": {
+        "all": true,
+        "execute": true,
+        "open": true,
+        "scope": [
+          {
+            "name": "compress_video",
+            "cmd": "ffmpeg",
+            "args": [
+              "-y",
+              "-i",
+              { "validator": ".*" },
+              "-vcodec",
+              "libx264",
+              "-crf",
+              "22",
+              "-r",
+              "30",
+              "-movflags",
+              "+faststart",
+              { "validator": ".*" }
+            ]
+          }
+        ]
+      },
+      "dialog": {
+        "all": false,
+        "open": true,
+        "message": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.tauri.buildgogo",
+      "targets": "all"
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "smol",
+        "width": 800,
+        "height": 600
+      }
+    ]
+  }
+}
