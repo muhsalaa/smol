@@ -2,6 +2,11 @@
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.
 
+## Installing
+
+- to install the release app just go to the release folder and download the `.dmg` file
+- you must still install ffmpeg by yourself
+
 ## Dev Setup
 
 - follow instruction here https://tauri.app/v1/guides/getting-started/prerequisites/

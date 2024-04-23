@@ -17,7 +17,6 @@ export const handleVideoCompression = async ({
   customPath,
 }: VidCompress) => {
   onStart();
-  console.log(file);
 
   const targetPath = await getOutputPath(customPath);
   const fileName = getFileName(file);
