@@ -12,11 +12,11 @@ This template should help get you started developing with Tauri, React and Types
 - follow instruction here https://tauri.app/v1/guides/getting-started/prerequisites/
   - install rust by command `curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh`
   - run `source "$HOME/.cargo/env"`
-- install deps `yarn`
-- run tauri dev env `yarn tauri dev`
+- install deps `pnpm install`
+- run tauri dev env `pnpm tauri dev`
   - this will run the desktop debug app and provide url to debug in browser
   - since this is creating desktop app, care only using tauri API.
-- to build run `yarn tauri build`
+- to build run `pnpm tauri build`
 
 ## ffmpeg
 
